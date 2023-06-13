@@ -1,6 +1,6 @@
 from geopy.geocoders import Nominatim
 
-class CountryName:
+class AdressName:
     def __init__(self, name):
         self.name = name
         self.geolocator = Nominatim(user_agent="geoapiExercises")

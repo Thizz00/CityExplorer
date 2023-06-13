@@ -2,7 +2,7 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
-from Api.country_info import CountryName
+from Api.adress_info import AdressName
 from Api.city_info import CityName
 from Api.capital_info import CapitalInfo
 from Api.weather_info import WeatherInfo
@@ -45,7 +45,7 @@ def show_cards(n_clicks, input_data):
         try:
             load_dotenv()
             path = "city_explorer/maps/map.html"
-            Adress = CountryName(input_data).get_address()
+            Adress = AdressName(input_data).get_address()
             city = CityName().get_city_name(input_data)
             is_capital = CapitalInfo().is_capital(input_data)
             weather_data = WeatherInfo(input_data).get_weather()
