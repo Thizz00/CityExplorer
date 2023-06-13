@@ -2,8 +2,11 @@
 ## About The Project
 
 This is a project that uses the Dash framework in Python to create a web-based dashboard called "CityExplorer Dashboard". It imports various components and dependencies, including Bootstrap components, HTML components, and modules from different APIs.
+
 The project allows users to enter a city name in English and search for information about that city. When the user clicks the "Search" button, a callback function is triggered. The function retrieves data from different APIs related to the entered city, such as country information, city name, capital status, weather information, temperature, and population.
+
 The project also generates a map using the MapGenerator and MapCreator classes. The map is saved as an HTML file and displayed in an iframe on the dashboard. The retrieved data is displayed on the dashboard as well, with each piece of information shown in a separate card. The cards are dynamically generated based on the retrieved data.
+
 If any errors occur during the process, an error message is displayed on the dashboard.
 
 ## Screenshots
