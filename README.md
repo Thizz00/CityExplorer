@@ -9,10 +9,7 @@ The project also generates a map using the MapGenerator and MapCreator classes. 
 
 If any errors occur during the process, an error message is displayed on the dashboard.
 
-## Screenshots
-### Main page
-![Screenshots](/Demo/ss1.PNG?raw=true)
-### Cards and map
+## Screenshot
 ![Screenshots](/Demo/ss2.PNG?raw=true)
 
 
