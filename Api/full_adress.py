@@ -10,7 +10,4 @@ class AdressName:
         self.location = self.geolocator.geocode(self.name)
         if self.location is not None:
             return(self.location.address)
-        else:
-            return(None)
-
 

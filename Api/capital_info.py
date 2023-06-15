@@ -5,5 +5,3 @@ class CapitalInfo:
         if city_data is not None:
             is_capital = 'Yes' if city_data['is_capital'] == True else 'No'
             return(is_capital)
-        else:
-            return(None)
