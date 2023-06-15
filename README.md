@@ -46,9 +46,9 @@ Requests==2.31.0
 
 ```
 ## .env file
-create an .env file, to which add two variables API_SECRET and API_KEY.\\
-Create an account on https://api-ninjas.com and copy your API Key.\\
-create an account on https://openweathermap.org and copy your API Key.\\
+create an .env file, to which add two variables API_SECRET and API_KEY. \\
+Create an account on https://api-ninjas.com and copy your API Key. \\
+create an account on https://openweathermap.org and copy your API Key. \\
 
 To the API_SECRET variable, assign the API key from https://api-ninjas.com, and to the API_KEY variable, assign the API key from https://openweathermap.org.
 
