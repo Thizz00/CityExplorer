@@ -18,8 +18,8 @@ input_layout = dbc.Container(
     [
         html.Div(
             [
-                dbc.Input(id="input-data", type="text", placeholder="Enter the city name in English"),
-                dbc.Button("Search", id="push-button", className="mt-3 btn-lg", style={"width": "100px"}),
+                dbc.Input(id="input-data",className = "text-center mt-4" ,type="text", placeholder="Enter the city name in English"),
+                dbc.Button("Search", id="push-button", className="text-center mt-4 btn-lg", style={"width": "100px"}),
             ],
             className="text-center",
         ),
@@ -79,9 +79,10 @@ def show_cards(n_clicks, input_data):
                                 html.P(str(value)),
                             ]
                         ),
-                        className="mb-2 text-center",
+                        className="mb-3 text-center",
                     ),
-                    width=4,
+                    #xs=12, sm=12, md=6, lg=4, 
+                    className="col-12 col-sm-12 col-md-6 col-lg-6 .col-xl-4",
                     style={"height": "150px", "border-radius": "10px"},
                 )
                 cards.append(card)
