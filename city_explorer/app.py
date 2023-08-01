@@ -18,8 +18,17 @@ input_layout = dbc.Container(
     [
         html.Div(
             [
-                dbc.Input(id="input-data",className = "text-center mt-4" ,type="text", placeholder="Enter the city name in English"),
-                dbc.Button("Search", id="push-button", className="text-center mt-4 btn-lg", style={"width": "100px"}),
+                dbc.Input(
+                    id="input-data",
+                    className="text-center mt-4",
+                    type="text",
+                    placeholder="Enter the city name in English"),
+                dbc.Button(
+                    "Search",
+                    id="push-button",
+                    className="text-center mt-4 btn-lg",
+                    style={
+                        "width": "100px"}),
             ],
             className="text-center",
         ),
@@ -34,6 +43,7 @@ app.layout = dbc.Container(
         dbc.Row(id="card-container", className="mt-4"),
     ]
 )
+
 
 @app.callback(
     Output("card-container", "children"),
@@ -81,15 +91,22 @@ def show_cards(n_clicks, input_data):
                         ),
                         className="mb-3 text-center",
                     ),
-                    #xs=12, sm=12, md=6, lg=4, 
+                    # xs=12, sm=12, md=6, lg=4,
                     className="col-12 col-sm-12 col-md-6 col-lg-6 .col-xl-4",
                     style={"height": "150px", "border-radius": "10px"},
                 )
                 cards.append(card)
-            map_html = html.Iframe(srcDoc=open(path, 'r').read(), width='100%', height='600')
+            map_html = html.Iframe(
+                srcDoc=open(
+                    path,
+                    'r').read(),
+                width='100%',
+                height='600')
             return dbc.Row(cards, justify="center"), map_html
 
         except Exception as e:
-            error_message = html.H3("Błąd: " + str(e), style={"text-align": "center"})
+            error_message = html.H3(
+                "Błąd: " + str(e),
+                style={
+                    "text-align": "center"})
             return error_message
-

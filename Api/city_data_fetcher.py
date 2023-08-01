@@ -13,9 +13,14 @@ class CityDataFetcher:
         return cls._instance
 
     def get_city_data(self, city_name):
+        """
+        This provided function, get_city_data, is used to retrieve city data from an external API.
+        It utilizes a RESTful API architecture.
+        """
         load_dotenv()
         api_secret = os.getenv('API_SECRET')
-        api_url = 'https://api.api-ninjas.com/v1/city?name={}'.format(city_name)
+        api_url = 'https://api.api-ninjas.com/v1/city?name={}'.format(
+            city_name)
         response = requests.get(api_url, headers={'X-Api-Key': api_secret})
 
         if response.status_code == requests.codes.ok:
@@ -23,4 +28,4 @@ class CityDataFetcher:
             parsed_data = json.loads(data)
             return parsed_data[0]
         else:
-            return("Error: API request failed.")
+            return ("Error: API request failed.")

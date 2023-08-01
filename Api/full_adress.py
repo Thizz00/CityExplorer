@@ -1,5 +1,6 @@
 from geopy.geocoders import Nominatim
 
+
 class AdressName:
     def __init__(self, name):
         self.name = name
@@ -9,5 +10,4 @@ class AdressName:
     def get_address(self):
         self.location = self.geolocator.geocode(self.name)
         if self.location is not None:
-            return(self.location.address)
-
+            return (self.location.address)
