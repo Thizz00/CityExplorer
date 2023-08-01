@@ -12,6 +12,14 @@ from Api.map_generator import MapGenerator, MapCreator
 import os
 from dotenv import load_dotenv
 
+"""
+The given code creates a web dashboard using the Dash framework, with Bootstrap components (Dash Bootstrap Components - dbc) for styling.
+The dashboard is designed to explore information about a city, including its address, name, capital status, weather, temperature, and population.
+The code uses the Dash framework for creating the web application.
+Dash is built on top of Flask, Plotly, and other libraries, allowing users to create interactive web applications with Python.
+The dashboard layout is structured using Bootstrap's grid system (col-, col-sm-, col-md-, col-lg-, col-xl-* classes) provided by Dash Bootstrap Components.
+"""
+
 app = dash.Dash(external_stylesheets=[dbc.themes.MINTY])
 
 input_layout = dbc.Container(
