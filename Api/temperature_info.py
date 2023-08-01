@@ -9,6 +9,11 @@ class TemperatureInfo:
         self.city_name = city_name
 
     def get_temperature(self):
+        """
+        The given function get_temperature(self) is a method defined within a class.
+        It retrieves the current temperature in Celsius for a specified city using the OpenWeatherMap API.
+        The function uses the requests library to send an HTTP GET request to the OpenWeatherMap API endpoint.
+        """
         load_dotenv()
         api_key = os.getenv('API_KEY')
         api_url = f'http://api.openweathermap.org/data/2.5/weather?q={self.city_name}&appid={api_key}'
